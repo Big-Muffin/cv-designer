@@ -9,5 +9,5 @@ export interface TitlePageState {
 }
 
 export const initialState: TitlePageState = {
-  title: '',
+  title: 'CV Designer',
 };

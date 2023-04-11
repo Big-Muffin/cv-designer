@@ -12,7 +12,7 @@ export class TitlePageFacade {
 
   constructor(private store: Store<AppState>) {}
 
-  setTitle(props: SetTitleProps): void {
-    this.store.dispatch(actions.setTitle(props));
+  setTitle(payload: SetTitleProps): void {
+    this.store.dispatch(actions.setTitle(payload));
   }
 }
