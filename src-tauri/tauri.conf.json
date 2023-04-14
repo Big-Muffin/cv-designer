@@ -57,10 +57,12 @@
     "windows": [
       {
         "fullscreen": false,
-        "height": 600,
         "resizable": true,
         "title": "cv-designer",
-        "width": 800
+        "height": 600,
+        "width": 800,
+        "minHeight": 600,
+        "minWidth": 800
       }
     ]
   }

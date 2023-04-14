@@ -2,9 +2,11 @@ import { NgModule } from '@angular/core';
 import { TitlePageComponent } from './title-page/title-page.component';
 import { CommonModule } from '@angular/common';
 
+const components = [TitlePageComponent];
+
 @NgModule({
-  declarations: [TitlePageComponent],
+  declarations: [...components],
   imports: [CommonModule],
-  exports: [TitlePageComponent],
+  exports: [...components],
 })
 export class FeaturesModule {}
