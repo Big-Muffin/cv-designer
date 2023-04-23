@@ -1,8 +1,10 @@
-# CV-Designer
+# CV-Designer - backend
 
-## About the project
+## Basics
 
-@TODO
+Backend runs on .NET 7.0 and Entity Framework.
+
+To run the project use `dotnet watch`.
 
 ## License
 
