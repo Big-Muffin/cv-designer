@@ -4,7 +4,9 @@
 
 Backend runs on .NET 7.0 and Entity Framework.
 
-To run the project use `dotnet watch`.
+To run the project use `dotnet watch run`.
+
+[Good introduction resource](https://www.youtube.com/watch?v=9zJn3a7L1uE)
 
 ## License
 
