@@ -1,4 +1,4 @@
-# CV Designer - frontend
+# CV-Designer - frontend
 
 ## Tauri application (desktop)
 
