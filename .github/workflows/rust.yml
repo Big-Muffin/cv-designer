@@ -34,7 +34,8 @@ jobs:
       run: |
         xterm &
         echo $DISPLAY
-        export DISPLAY="localmachine:0.0"
+        export DISPLAY="$(grep nameserver /etc/resolv.conf | sed 's/nameserver //'):0"
+#       export DISPLAY="grep nameserver /etc/resolv.conf | sed 's/nameserver //':0"   
         
     - name: Adding localhost to privileges
       run: xhost +
