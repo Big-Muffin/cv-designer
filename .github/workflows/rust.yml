@@ -24,21 +24,21 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     
-    - name: Install xhost and xterm
-      run: |
-        sudo apt-get install x11-xserver-utils
-        sudo apt-get update -y
-        sudo apt-get install -y xterm
+#     - name: Install xhost and xterm
+#       run: |
+#         sudo apt-get install x11-xserver-utils
+#         sudo apt-get update -y
+#         sudo apt-get install -y xterm
         
-    - name: Try to make it work bruh
-      run: |
-        export DISPLAY="$(grep nameserver /etc/resolv.conf | sed 's/nameserver //'):0"
-        xterm &
-        echo $DISPLAY
-#       export DISPLAY="grep nameserver /etc/resolv.conf | sed 's/nameserver //':0"   
+#     - name: Try to make it work bruh
+#       run: |
+#         export DISPLAY="$(grep nameserver /etc/resolv.conf | sed 's/nameserver //'):0"
+#         xterm &
+#         echo $DISPLAY
+# #       export DISPLAY="grep nameserver /etc/resolv.conf | sed 's/nameserver //':0"   
         
-    - name: Adding localhost to privileges
-      run: xhost +
+#     - name: Adding localhost to privileges
+#       run: xhost +
       
     - name: Tauri dependencies
       run: >-
@@ -66,7 +66,9 @@ jobs:
         
     - run: rustup update ${{ matrix.toolchain }} && rustup default ${{ matrix.toolchain }}
     
-    - name: Build
-      run: |
-        yarn tauri dev
+#     - name: Build
+#       run: |
+#         yarn tauri dev
+
+    -
         
