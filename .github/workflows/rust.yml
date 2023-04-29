@@ -10,6 +10,7 @@ env:
   CARGO_TERM_COLOR: always
 
 jobs:
+# I'll sort everything into jobs later when it finally works :>
   build:
 
     runs-on: ubuntu-latest
@@ -23,9 +24,10 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     
-    - name: Adding localhost to privelages
-      run: |
-        xhost +si:localuser:root
+    - name: Install xhost
+      run: apt-get install x11-xserver-utils
+    - name: Adding localhost to privileges
+      run: xhost +si:localuser:root
         
       
     - name: Tauri dependencies
