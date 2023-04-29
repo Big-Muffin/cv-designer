@@ -26,6 +26,10 @@ jobs:
     
     - name: Install xhost
       run: sudo apt-get install x11-xserver-utils
+    - name: Try to make it work bruh
+      run: |
+        xterm &
+        echo $DISPLAY
     - name: Adding localhost to privileges
       run: xhost +
       
