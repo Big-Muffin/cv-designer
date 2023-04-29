@@ -22,9 +22,7 @@ jobs:
           
     steps:
     - uses: actions/checkout@v3
-    
-    - name: Removing homebrew
-      run: rm -rf /usr/local/Cellar /usr/local/.git && brew cleanup
+  
     - name: Tauri dependencies
       run: >-
         sudo apt-get update &&
