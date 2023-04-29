@@ -27,8 +27,7 @@ jobs:
     - name: Install xhost
       run: sudo apt-get install x11-xserver-utils
     - name: Adding localhost to privileges
-      run: xhost +si:localuser:root
-        
+      run: xhost +
       
     - name: Tauri dependencies
       run: >-
