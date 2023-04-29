@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - cv-designer_data:/var/lib/postgresql/data
+    ports:
+      - "${HOST_PORT}:${CONTAINER_PORT}"
+    container_name: cv-designer
+
+volumes:
+  cv-designer_data:
