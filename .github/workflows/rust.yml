@@ -32,9 +32,9 @@ jobs:
         
     - name: Try to make it work bruh
       run: |
+        export DISPLAY="$(grep nameserver /etc/resolv.conf | sed 's/nameserver //'):0"
         xterm &
         echo $DISPLAY
-        export DISPLAY="$(grep nameserver /etc/resolv.conf | sed 's/nameserver //'):0"
 #       export DISPLAY="grep nameserver /etc/resolv.conf | sed 's/nameserver //':0"   
         
     - name: Adding localhost to privileges
