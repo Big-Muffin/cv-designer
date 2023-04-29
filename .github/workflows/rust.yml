@@ -25,8 +25,7 @@ jobs:
     
     - name: Adding localhost to privelages
       run: |
-        sudo apt install --reinstall gparted
-        sudo gparted
+        xhost +si:localuser:root
         
       
     - name: Tauri dependencies
