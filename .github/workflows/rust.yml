@@ -34,6 +34,8 @@ jobs:
       run: |
         xterm &
         echo $DISPLAY
+        localmachine-xterm$ export DISPLAY="localmachine:0.0"
+        
     - name: Adding localhost to privileges
       run: xhost +
       
