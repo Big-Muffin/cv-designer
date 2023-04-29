@@ -22,19 +22,6 @@ jobs:
           
     steps:
     - uses: actions/checkout@v3
-    
-    - name: Set Node.js 16.x
-      uses: actions/setup-node@v3
-      with:
-        node-version: 16.x
-
-    - name: Run install
-      uses: borales/actions-yarn@v4
-      with:
-        cmd: install # will run `yarn install` command
-      env:
-        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }} # if needed
-        
     - name: Tauri dependencies
       run: >-
         sudo apt-get update &&
@@ -44,25 +31,24 @@ jobs:
         libwebkit2gtk-4.0-dev
         webkit2gtk-driver
         xvfb
+    
+    - name: Set Node.js 16.x
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16.x
+        
+    - name: Yarn install
+      run: yarn install
+        
+    - name: Install tauri-driver
+      uses: actions-rs/cargo@v1
+      with:
+          command: install
+          args: tauri-driver
         
     - run: rustup update ${{ matrix.toolchain }} && rustup default ${{ matrix.toolchain }}
+    
     - name: Build
       run: |
         yarn tauri dev
         
-#     - name: Run tests
-#       run: |
-#         cd src-tauri
-#         cargo test .\src\main.rs --verbose
-
-#     steps:
-#     - uses: actions/checkout@v3
-#     - run: rustup update ${{ matrix.toolchain }} && rustup default ${{ matrix.toolchain }}
-#     - name: Build
-#       run: |
-#         cd src-tauri
-#         cargo run .\src\main.rs --verbose
-#     - name: Run tests
-#       run: |
-#         cd src-tauri
-#         cargo test .\src\main.rs --verbose
