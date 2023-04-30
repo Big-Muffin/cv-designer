@@ -11,7 +11,7 @@ services:
     volumes:
       - cv-designer_data:/var/lib/postgresql/data
     ports:
-      - "${HOST_PORT}:${CONTAINER_PORT}"
+      - '${HOST_PORT}:${CONTAINER_PORT}'
     container_name: cv-designer
 
 volumes:
