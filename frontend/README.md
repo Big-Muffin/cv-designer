@@ -1,12 +1,9 @@
 # CV-Designer - frontend
 
-## Tauri application (desktop)
+## How to run
 
-to run use `yarn tauri dev` (first run will be longer).
-
-## Angular application (web)
-
-To run use `yarn start`
+- Tauri application (desktop) - `yarn tauri dev` (first run will be longer)
+- Angular application (web) - `yarn start`
 
 ## Prerequisites
 
