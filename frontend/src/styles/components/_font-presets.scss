@@ -1,5 +1,7 @@
 @import 'utils';
 
+// for classes like cv-m-500, or cv-xxl-700
+
 @mixin fontCombinations {
 	@each $size in ('xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl') {
 		@each $weight in ('400', '500', '700') {
