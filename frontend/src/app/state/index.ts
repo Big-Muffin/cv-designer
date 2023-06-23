@@ -1,16 +1,23 @@
 import { Action, ActionReducer } from '@ngrx/store';
-import { TitlePageFacade, TitlePageState, titlePageReducer } from './title-page';
+import {
+	SettingsEffects,
+	SettingsFacade,
+	SettingsState,
+	settingsReducer,
+} from './settings';
 
 export interface AppState {
-  titlePage: TitlePageState;
+	settings: SettingsState;
 }
 
 interface AppReducers {
-  titlePage: ActionReducer<TitlePageState, Action>;
+	settings: ActionReducer<SettingsState, Action>;
 }
 
 export const reducers: AppReducers = {
-  titlePage: titlePageReducer,
+	settings: settingsReducer,
 };
 
-export const facades = [TitlePageFacade];
+export const facades = [SettingsFacade];
+
+export const effects = [SettingsEffects];

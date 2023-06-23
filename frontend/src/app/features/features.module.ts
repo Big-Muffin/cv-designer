@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
-import { TitlePageComponent } from './title-page/title-page.component';
 import { CommonModule } from '@angular/common';
+import { WelcomeComponent } from './welcome/welcome.component';
+import { SharedModule } from '../shared/shared.module';
 
-const components = [TitlePageComponent];
+const components = [WelcomeComponent];
 
 @NgModule({
-  declarations: [...components],
-  imports: [CommonModule],
-  exports: [...components],
+	declarations: [...components],
+	imports: [CommonModule, SharedModule],
+	exports: [...components],
 })
 export class FeaturesModule {}

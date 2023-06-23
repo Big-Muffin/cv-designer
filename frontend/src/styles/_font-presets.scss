@@ -1,0 +1,17 @@
+@import 'utils';
+
+@mixin fontCombinations {
+	@each $size in ('xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl') {
+		@each $weight in ('400', '500', '700') {
+			$font-size: getFontSize(#{$size});
+			$font-weight: getFontWeight(#{$weight});
+
+			.cv-#{$size}-#{$weight} {
+				font-size: $font-size;
+				font-weight: $font-weight;
+			}
+		}
+	}
+}
+
+@include fontCombinations();

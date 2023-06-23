@@ -1,0 +1,45 @@
+$colors: (
+	background: #0d131b,
+	warning: #e63946,
+	main: #f1faee,
+	secondary: #457b9d,
+	warning_hover: #a1252e,
+	secondary_hover: #2a546d,
+	main_hover: #abb1a9,
+);
+
+@function getColor($name) {
+	@return map-get($colors, unquote($name));
+}
+
+$fontWeights: (
+	regular: 400,
+	400: 400,
+	medium: 500,
+	500: 500,
+	bold: 700,
+	700: 700,
+);
+
+@function getFontWeight($name) {
+	@return map-get($fontWeights, unquote($name));
+}
+
+$fontSizes: (
+	xxs: x-small,
+	xs: small,
+	s: medium,
+	m: large,
+	l: x-large,
+	xl: xx-large,
+	xxl: xxx-large,
+);
+
+@function getFontSize($name) {
+	@return map-get($fontSizes, unquote($name));
+}
+
+@mixin fontCombination($size, $weight) {
+	font-size: getFontSize(#{$size});
+	font-weight: getFontWeight(#{$weight});
+}

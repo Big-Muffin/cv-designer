@@ -1,0 +1,14 @@
+<div class="welcome">
+	<div class="welcome__container">
+		<img [src]="'welcome/welcome-logo.svg' | getImageAsset" />
+		<div class="welcome__buttons">
+			<button class="cv-button-main" (click)="onClickLogin()">
+				{{ 'WELCOME.LOGIN_BUTTON' | translate }}
+			</button>
+
+			<button class="cv-button-secondary" (click)="onClickGuest()">
+				{{ 'WELCOME.GUEST_BUTTON' | translate }}
+			</button>
+		</div>
+	</div>
+</div>
