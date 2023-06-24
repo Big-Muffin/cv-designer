@@ -11,13 +11,15 @@ export const LANGUAGES: Language[] = [
 ];
 
 export interface SetLanguageProps {
-  language: Language;
+	language: Language;
 }
 
 export interface SettingsState {
-  language: Language;
+	language: Language;
+	__newestChange: Date;
 }
 
 export const initialState: SettingsState = {
-  language: LANGUAGES[DEFAULT_LANGUAGE_INDEX],
+	language: LANGUAGES[DEFAULT_LANGUAGE_INDEX],
+	__newestChange: new Date(),
 };

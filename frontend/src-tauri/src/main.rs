@@ -4,8 +4,8 @@
 )]
 
 #[tauri::command]
-fn my_custom_command() {
-    println!("I was invoked from JS!");
+fn my_custom_command(message: String) -> String {
+    return format!("{} {}", "Hello from", message);
 }
 
 fn main() {

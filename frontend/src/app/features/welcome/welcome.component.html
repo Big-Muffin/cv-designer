@@ -2,13 +2,17 @@
 	<div class="welcome__container">
 		<img [src]="'welcome/welcome-logo.svg' | getImageAsset" />
 		<div class="welcome__buttons">
-			<button class="cv-button-main" (click)="onClickLogin()">
-				{{ 'WELCOME.LOGIN_BUTTON' | translate }}
-			</button>
+			<app-button
+				[type]="BUTTON_TYPE.MAIN"
+				[text]="'WELCOME.LOGIN_BUTTON' | translate"
+				(buttonClick)="onClickLogin()"
+			></app-button>
 
-			<button class="cv-button-secondary" (click)="onClickGuest()">
-				{{ 'WELCOME.GUEST_BUTTON' | translate }}
-			</button>
+			<app-button
+				[type]="BUTTON_TYPE.SECONDARY"
+				[text]="'WELCOME.GUEST_BUTTON' | translate"
+				(buttonClick)="onClickGuest()"
+			></app-button>
 		</div>
 	</div>
 </div>
