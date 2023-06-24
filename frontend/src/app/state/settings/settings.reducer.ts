@@ -5,5 +5,13 @@ import * as actions from './settings.actions';
 
 export const settingsReducer = createReducer(
 	initialState,
-	on(actions.setLanguage, (state, { language }) => ({ ...state, language })),
+	on(actions.setNewSettings, (state, { type, ...newSettings }) => ({
+		...state,
+		...newSettings,
+	})),
+
+	on(actions.updateNewestChange, (state, { __newestChange }) => ({
+		...state,
+		__newestChange,
+	}))
 );

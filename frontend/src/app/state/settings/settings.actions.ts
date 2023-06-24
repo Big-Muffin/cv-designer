@@ -1,7 +1,12 @@
 import { createAction, props } from '@ngrx/store';
-import { SetLanguageProps } from './settings.model';
+import { SetSettingsProps, UpdateNewestChangeProps } from './settings.model';
 
-export const setLanguage = createAction(
-  '[Settings] Set language',
-  props<SetLanguageProps>()
+export const updateNewestChange = createAction(
+	'[Settings] Update newest change date',
+	props<UpdateNewestChangeProps>()
+);
+
+export const setNewSettings = createAction(
+	'[Settings] Set new settings',
+	props<SetSettingsProps>()
 );

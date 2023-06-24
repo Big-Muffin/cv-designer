@@ -17,12 +17,16 @@ export class SettingsEffects {
 		private translateService: TranslateService
 	) {}
 
-	setLanguageEffect$ = createEffect(
+	setNewSettings$ = createEffect(
 		() =>
 			this.actions$.pipe(
-				ofType(actions.setLanguage),
-				tap(({ language }) => {
-					this.translateService.use(language.code);
+				ofType(actions.setNewSettings),
+				tap(({ type, ...newSettings }) => {
+					if (newSettings.language) {
+						this.translateService.use(newSettings.language.code);
+					}
+
+					actions.updateNewestChange({ __newestChange: new Date() });
 				})
 			),
 		{ dispatch: false }

@@ -13,6 +13,6 @@ export class SettingsFacade {
 	constructor(private store: Store<AppState>) {}
 
 	setLanguage(payload: SetLanguageProps): void {
-		this.store.dispatch(actions.setLanguage(payload));
+		this.store.dispatch(actions.setNewSettings(payload));
 	}
 }

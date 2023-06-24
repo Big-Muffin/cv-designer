@@ -10,9 +10,11 @@ export const LANGUAGES: Language[] = [
 	{ name: 'Polski', code: 'pl-PL' },
 ];
 
-export interface SetLanguageProps {
-	language: Language;
+export interface UpdateNewestChangeProps {
+	__newestChange: Date;
 }
+
+export type SetSettingsProps = Partial<Omit<SettingsState, '__newestChange'>>
 
 export interface SettingsState {
 	language: Language;
