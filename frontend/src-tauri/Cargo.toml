@@ -1,11 +1,11 @@
 [package]
-name = "CV_Designer"
+name = "cv_designer"
 version = "0.1.0"
 description = "CV Designer"
 authors = ["you"]
 license = ""
 repository = ""
-default-run = "CV_Designer"
+default-run = "cv_designer"
 edition = "2021"
 rust-version = "1.59"
 
