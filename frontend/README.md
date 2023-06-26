@@ -1,5 +1,9 @@
 # CV-Designer - frontend
 
+## Guidelines
+
+- when uploading new svgs, pass them through https://jakearchibald.github.io/svgomg/
+
 ## How to run
 
 - Tauri application (desktop) - `yarn tauri dev` (first run will be longer)

@@ -1,0 +1,57 @@
+@import 'src/styles/utils';
+
+// for classes like cv-button-main
+
+@mixin cv-button-base() {
+	// reset default button styling
+	appearance: none;
+	border: none;
+	padding: 0;
+	margin: 0;
+	font-family: inherit;
+	line-height: inherit;
+
+	border-radius: 0.5rem;
+	height: 2rem;
+	width: 8rem;
+	@include fontCombination(m, 500);
+	padding: 0.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	user-select: none;
+	cursor: pointer;
+}
+
+.cv-button {
+	&-main {
+		@include cv-button-base();
+		background-color: getColor(main);
+		color: getColor(background);
+
+		&:hover {
+			background-color: getColor(main_hover);
+		}
+	}
+
+	&-secondary {
+		@include cv-button-base();
+		background-color: getColor(secondary);
+		color: getColor(main);
+
+		&:hover {
+			background-color: getColor(secondary_hover);
+		}
+	}
+
+	&-warning {
+		@include cv-button-base();
+		background-color: getColor(warning);
+		color: getColor(main);
+
+		&:hover {
+			background-color: getColor(warning_hover);
+		}
+	}
+}

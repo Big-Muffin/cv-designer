@@ -1,0 +1,18 @@
+<div class="welcome">
+	<div class="welcome__container">
+		<img [src]="'welcome/welcome-logo.svg' | getImageAsset" />
+		<div class="welcome__buttons">
+			<app-button
+				[type]="BUTTON_TYPE.MAIN"
+				[text]="'WELCOME.LOGIN_BUTTON' | translate"
+				(buttonClick)="onClickLogin()"
+			></app-button>
+
+			<app-button
+				[type]="BUTTON_TYPE.SECONDARY"
+				[text]="'WELCOME.GUEST_BUTTON' | translate"
+				(buttonClick)="onClickGuest()"
+			></app-button>
+		</div>
+	</div>
+</div>
