@@ -8,7 +8,7 @@
 		"withGlobalTauri": true
 	},
 	"package": {
-		"productName": "cv-designer",
+		"productName": "CV Designer",
 		"version": "0.1.0"
 	},
 	"tauri": {
@@ -22,14 +22,14 @@
 		},
 		"bundle": {
 			"active": true,
-			"category": "DeveloperTool",
+			"category": "Productivity",
 			"copyright": "",
 			"deb": {
 				"depends": []
 			},
 			"externalBin": [],
-			"icon": ["icons/favicon.ico"],
-			"identifier": "com.tauri.dev",
+			"icon": ["icons/app-icon.png"],
+			"identifier": "cv.designer.dev",
 			"longDescription": "",
 			"macOS": {
 				"entitlements": null,
@@ -38,14 +38,14 @@
 				"providerShortName": null,
 				"signingIdentity": null
 			},
-			"resources": [],
-			"shortDescription": "",
-			"targets": "all",
 			"windows": {
 				"certificateThumbprint": null,
 				"digestAlgorithm": "sha256",
 				"timestampUrl": ""
-			}
+			},
+			"resources": [],
+			"shortDescription": "",
+			"targets": "all"
 		},
 		"security": {
 			"csp": null
@@ -57,7 +57,7 @@
 			{
 				"fullscreen": false,
 				"resizable": true,
-				"title": "cv-designer",
+				"title": "CV Designer",
 				"height": 600,
 				"width": 800,
 				"minHeight": 600,
